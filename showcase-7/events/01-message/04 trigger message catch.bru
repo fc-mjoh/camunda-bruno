@@ -1,0 +1,22 @@
+meta {
+  name: 04 trigger message catch
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/engine-rest/message
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "messageName": "catch-message",
+    "businessKey" : "test1234",
+    "type": "String",
+    "value": "Some value",
+    "valueInfo": {}
+  
+  }
+}

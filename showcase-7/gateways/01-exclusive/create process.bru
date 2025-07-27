@@ -1,0 +1,23 @@
+meta {
+  name: create process
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/engine-rest/process-definition/key/gateways-exclusive/start
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "businessKey": "test123",
+    "variables": {
+      "number": {
+        "value": "1",
+        "type": "Integer"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+meta {
+  name: 04 trigger variable change
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/engine-rest/process-instance/c334f315-3dd9-11f0-9758-4efa52ecbd5b/variables/isReady
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "value": "true",
+    "type": "Boolean"
+  }
+}

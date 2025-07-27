@@ -1,0 +1,23 @@
+meta {
+  name: 01 create process signal
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/engine-rest/process-definition/key/Events-signal_03/start
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "businessKey": "test1234",
+    "variables": {
+      "number": {
+        "value": "4",
+        "type": "Integer"
+      }
+    }
+  }
+}

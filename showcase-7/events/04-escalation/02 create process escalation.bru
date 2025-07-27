@@ -1,0 +1,23 @@
+meta {
+  name: 02 create process escalation
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/engine-rest/process-definition/key/Events-escalation_02/start
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "businessKey": "test123",
+    "variables": {
+      "succeed": {
+        "value": "false",
+        "type": "Boolean"
+      }
+    }
+  }
+}

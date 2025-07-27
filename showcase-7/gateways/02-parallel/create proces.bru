@@ -1,0 +1,23 @@
+meta {
+  name: create proces
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/engine-rest/process-definition/key/gateways-parallel/start
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "businessKey": "test123",
+    "variables": {
+      "number": {
+        "value": "1",
+        "type": "Integer"
+      }
+    }
+  }
+}

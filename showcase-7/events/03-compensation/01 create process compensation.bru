@@ -1,0 +1,23 @@
+meta {
+  name: 01 create process compensation
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/engine-rest/process-definition/key/events-compensation_01/start
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "businessKey": "test123",
+    "variables": {
+      "succeed": {
+        "value": "false",
+        "type": "Boolean"
+      }
+    }
+  }
+}

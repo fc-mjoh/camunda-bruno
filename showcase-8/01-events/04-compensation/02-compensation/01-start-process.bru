@@ -1,0 +1,20 @@
+meta {
+  name: 01-start-process
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/v2/process-instances
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "processDefinitionId": "lesson-01-04-02-compensation",
+    "variables": {
+      "successful": false
+    }
+  }
+}

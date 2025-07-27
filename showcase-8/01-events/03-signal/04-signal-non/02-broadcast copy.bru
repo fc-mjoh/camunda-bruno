@@ -1,0 +1,17 @@
+meta {
+  name: 02-broadcast copy
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/v2/signals/broadcast
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "signalName": "signal-3"
+  }
+}

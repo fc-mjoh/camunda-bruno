@@ -1,0 +1,20 @@
+meta {
+  name: 01-01-start-process
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/v2/process-instances
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "processDefinitionId": "lesson-01-01-error-end-start-sub",
+    "variables": {
+      "price": 99
+    }
+  }
+}

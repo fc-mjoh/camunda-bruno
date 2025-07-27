@@ -1,0 +1,20 @@
+meta {
+  name: 04-complete-user
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/v1/user-tasks/2251799813986381/complete
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {   
+      "variables": {
+        "approved": true,
+        "reviewer": "Max Mustermann"
+      }
+  }
+}

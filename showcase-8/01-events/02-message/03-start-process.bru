@@ -1,0 +1,20 @@
+meta {
+  name: 03-start-process
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/v2/process-instances
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "processDefinitionId": "lesson-01-01-01-message",
+    "variables": {
+      "correlationKey": "1236"
+    }
+  }
+}

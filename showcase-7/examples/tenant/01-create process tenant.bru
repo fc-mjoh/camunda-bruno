@@ -1,0 +1,23 @@
+meta {
+  name: 01-create process tenant
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/engine-rest/process-definition/key/Example_Process_Tenant/tenant-id/lv/start
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "businessKey": "test123",
+    "variables": {
+      "tenantId": {
+        "value": "kv",
+        "type": "String"     
+      }
+    }
+  }
+}

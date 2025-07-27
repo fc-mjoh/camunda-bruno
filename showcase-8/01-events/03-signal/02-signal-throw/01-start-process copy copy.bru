@@ -1,0 +1,20 @@
+meta {
+  name: 01-start-process copy copy
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/v2/process-instances
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "processDefinitionId": "lesson-01-01-02-signal-throw",
+    "variables": {
+      "id": 123
+    }
+  }
+}

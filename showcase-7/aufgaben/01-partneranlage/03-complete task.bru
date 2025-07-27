@@ -1,0 +1,22 @@
+meta {
+  name: 03-complete task
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/engine-rest/task/9807393b-49af-11f0-9c8b-e6bdb6ae23fe/complete
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "variables": {
+    "approved": {
+      "value": true
+    }
+    },
+    "withVariablesInReturn": true
+  }
+}

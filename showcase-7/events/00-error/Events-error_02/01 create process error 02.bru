@@ -1,0 +1,23 @@
+meta {
+  name: 01 create process error 02
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/engine-rest/process-definition/key/Events-error_02/start
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "businessKey": "test123",
+    "variables": {
+      "price": {
+        "value": "0",
+        "type": "Long"
+      }
+    }
+  }
+}

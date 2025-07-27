@@ -1,0 +1,23 @@
+meta {
+  name: 03 create process condition
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/engine-rest/process-definition/key/Events-conditional_03/start
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "businessKey": "test123",
+    "variables": {
+      "succeed": {
+        "value": "false",
+        "type": "Boolean"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+meta {
+  name: 05-trigger-boundary
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8080/v2/messages/publication
+  body: json
+  auth: inherit
+}
+
+body:json {
+    {
+      "name": "catch-message",
+      "correlationKey": "1236",
+      "timeToLive":1,
+      "messageId": "string",
+      "variables": {}
+    }
+}

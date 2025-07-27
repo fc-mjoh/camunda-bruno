@@ -1,0 +1,22 @@
+meta {
+  name: 02 trigger message boundary
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/engine-rest/message
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "messageName": "cancel-message",
+    "businessKey" : "test123",
+    "type": "String",
+    "value": "Some value",
+    "valueInfo": {}
+  
+  }
+}

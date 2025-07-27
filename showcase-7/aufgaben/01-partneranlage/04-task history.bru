@@ -1,0 +1,15 @@
+meta {
+  name: 04-task history
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8080/engine-rest/history/detail?processInstanceId=de2a64b0-49af-11f0-9c8b-e6bdb6ae23fe
+  body: json
+  auth: inherit
+}
+
+params:query {
+  processInstanceId: de2a64b0-49af-11f0-9c8b-e6bdb6ae23fe
+}
