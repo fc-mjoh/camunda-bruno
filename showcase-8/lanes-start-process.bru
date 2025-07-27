@@ -1,0 +1,20 @@
+meta {
+  name: lanes-start-process
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/v2/process-instances
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "processDefinitionId": "lane-pool-1",
+    "variables": {
+      "receiver": "lanes-pool-msg"
+    }
+  }
+}
