@@ -1,0 +1,24 @@
+meta {
+  name: 02 correlate message
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8080/engine-rest/message
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "messageName": "msg-corr",
+    "correlationKeys": {
+      "order": {
+        "value": "order-1236",
+        "type": "string"
+      }
+    }
+  
+  }
+}
